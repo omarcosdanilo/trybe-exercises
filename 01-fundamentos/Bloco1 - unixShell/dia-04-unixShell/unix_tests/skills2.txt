@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+React
+SQL
+NoSQL
+HTML
+CSS

@@ -5,3 +5,7 @@
 li:hover{
     background-color: blueviolet;
 }
+
+li:active{
+    font-family:monospace;
+}

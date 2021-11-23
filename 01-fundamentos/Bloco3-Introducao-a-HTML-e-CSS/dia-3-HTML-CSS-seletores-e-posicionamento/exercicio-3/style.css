@@ -21,3 +21,8 @@ div:nth-of-type(4){
 div:nth-of-type(5){
     background-color: hotpink;
 }
+
+h3 {
+    color: whitesmoke;
+    font-family:sans-serif;
+}

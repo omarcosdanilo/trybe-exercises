@@ -123,3 +123,15 @@ th, td{
     background-color: tomato;
     transition: all 0.3s ease-in-out;
 }
+
+/* ======== FOOTER ======== */
+
+footer{
+    background-color: thistle;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color:tomato;
+}

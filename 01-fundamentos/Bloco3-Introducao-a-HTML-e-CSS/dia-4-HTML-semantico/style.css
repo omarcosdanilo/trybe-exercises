@@ -98,3 +98,28 @@ th, td{
     box-shadow: -5px 1px 15px;
 }
 
+/* ======== REFERENCES ========= */
+.references{
+    background-color: whitesmoke;
+}
+.references ul{
+    text-align: center;
+}
+.references li{
+    display: inline-block;
+    padding: 10px;
+}
+
+.references a{
+    text-decoration: none;
+    background-color: thistle;
+    padding: 15px;
+    border-radius: 25px;
+    color: white;
+}
+
+.references a:hover{
+    font-size: 1.2em;
+    background-color: tomato;
+    transition: all 0.3s ease-in-out;
+}

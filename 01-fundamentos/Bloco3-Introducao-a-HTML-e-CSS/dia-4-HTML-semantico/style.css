@@ -2,4 +2,43 @@
     margin: 0;
     padding: 0;
 }
+body{
+    max-width: 1920px;
+    margin: auto;
+}
 
+/* ========= HEADER ============ */
+header{
+    background-color: whitesmoke;
+}
+
+.header-container h1{
+    text-align: center;
+    font-size: 2.5em;
+    padding: 5%;
+}
+
+
+.header-container ul{
+    text-align: center;
+    background-color: thistle;
+    height: 10vh;
+}
+nav ul li{
+    display: inline-block;
+    font-size: 1.25em;
+    padding-top: 3%;
+    padding-right: 2%;
+}
+
+.header-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.header-container a:hover{
+    color: tomato;
+    transition: 0.5s;
+}
+
+/* O Stomatopoda */

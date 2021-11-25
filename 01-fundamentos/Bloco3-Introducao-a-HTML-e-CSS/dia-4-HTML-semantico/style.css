@@ -41,4 +41,60 @@ nav ul li{
     transition: 0.5s;
 }
 
-/* O Stomatopoda */
+/* ========== O STOMATOPODA =========== */
+
+.o-stomatopoda{
+    background-color: whitesmoke;
+}
+
+.general-article h2{
+    text-align: center;
+    padding: 2%;
+}
+
+.general-article h3{
+    text-align: center;
+    padding: 1%;
+}
+
+.general-article p{
+    max-width: 800px;
+    margin: auto;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 3vh;
+    text-indent: 2em;
+    padding-bottom: 3%;
+}
+
+table{
+    margin: auto;
+    border: 1px solid thistle;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* ======== FACTS =========== */
+.facts{
+    text-align: center;
+}
+
+.facts h2, h3{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.facts article{
+    display: inline-block;
+    max-width: 266px;
+    text-align: justify;
+    border: 1px solid thistle;
+    padding: 5px;
+    background-color: tomato;
+    box-shadow: -5px 1px 15px;
+}
+

@@ -5,6 +5,7 @@
 body{
     max-width: 1920px;
     margin: auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* ========= HEADER ============ */
@@ -47,6 +48,10 @@ nav ul li{
     background-color: whitesmoke;
 }
 
+.general-article{
+    position: relative;
+}
+
 .general-article h2{
     text-align: center;
     padding: 2%;
@@ -77,6 +82,23 @@ th, td{
     padding: 10px;
 }
 
+/* ========== ASIDE ============ */
+
+aside{
+    position: absolute;
+    display: inline-block;
+    background-color: tomato;
+    text-align: center;
+    top: 50%;
+
+
+}
+
+aside a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 /* ======== FACTS =========== */
 .facts{
     text-align: center;
@@ -95,12 +117,14 @@ th, td{
     border: 1px solid thistle;
     padding: 5px;
     background-color: tomato;
-    box-shadow: -5px 1px 15px;
+    box-shadow: -3px 1px 8px;
 }
+
 
 /* ======== REFERENCES ========= */
 .references{
     background-color: whitesmoke;
+    height: 150px;
 }
 .references ul{
     text-align: center;

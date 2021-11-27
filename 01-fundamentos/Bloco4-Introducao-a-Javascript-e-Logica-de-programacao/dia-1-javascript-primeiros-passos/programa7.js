@@ -1,4 +1,4 @@
-let nota = -1;
+let nota = 0.9;
 let porcentagem = nota * 10
 let conceito;
 

@@ -1,13 +1,10 @@
- let n = 50;
- let aux = '';
 
- for (i = 1; i <= n; i += 1) {
-     for (j = 1; j <=n; j += 1) {
-         aux += '*';
-     }
-     console.log(aux);
-     aux = '';
-    
- }
+let n = 5;
+let aux = '';
+
+for (let i = 0; i < n; i += 1){
+    aux += '*';
+    console.log(aux);
+}
 
 

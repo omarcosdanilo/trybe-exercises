@@ -5,3 +5,10 @@ function changeParagraph (paragraph) {
   return change;
 }
 changeParagraph('Trabalhando muito');
+
+// Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+function changeColor (color) {
+   let changeColor = document.getElementsByClassName('main-content')[0].style.background = color;
+   return changeColor;
+}
+changeColor('rgb(76,164,109)')

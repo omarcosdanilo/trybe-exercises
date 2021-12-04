@@ -20,3 +20,9 @@ function changeColorCenter(color2){
 }
 changeColorCenter('white')
 
+//Crie uma função que corrija o texto da tag <h1>.
+function changeTitle (title) {
+  let changeTitle = document.getElementsByTagName('h1')[0].innerText = title;
+  return changeTitle;
+}
+changeTitle('Exercício 5.1 - JavaScript');

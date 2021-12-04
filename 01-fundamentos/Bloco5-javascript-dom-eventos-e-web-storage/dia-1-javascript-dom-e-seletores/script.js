@@ -34,3 +34,13 @@ function changeP (uppercase) {
 }
 changeP('uppercase');
 
+//Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+function consoleShow () {
+  let array = document.getElementsByTagName('p');
+
+  for (let i = 0; i < array.length; i += 1){
+    console.log(array[i].innerText);
+  }
+  return array  
+}
+consoleShow();

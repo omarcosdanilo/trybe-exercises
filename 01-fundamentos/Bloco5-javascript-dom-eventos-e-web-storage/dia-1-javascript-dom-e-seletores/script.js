@@ -28,11 +28,16 @@ function changeTitle (title) {
 changeTitle('Exercício 5.1 - JavaScript');
 
 //Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-function changeP (uppercase) {
-  let changeAllP = document.getElementsByTagName('p')[0].style.textTransform = uppercase;
-  return changeAllP;
+function changeP () {
+  let changeP = document.getElementsByTagName('p');
+
+  for (let i = 0; i < changeP.length; i += 1){
+    changeP[i].style.textTransform = 'uppercase';
+  }
+
+  return changeP;
 }
-changeP('uppercase');
+changeP();
 
 //Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 function consoleShow () {

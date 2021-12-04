@@ -7,8 +7,16 @@ function changeParagraph (paragraph) {
 changeParagraph('Trabalhando muito');
 
 // Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-function changeColor (color) {
-   let changeColor = document.getElementsByClassName('main-content')[0].style.background = color;
-   return changeColor;
+function changeColorSide (color) {
+   let changeColorSide = document.getElementsByClassName('main-content')[0].style.background = color;
+   return changeColorSide;
 }
-changeColor('rgb(76,164,109)')
+changeColorSide('rgb(76,164,109)')
+
+//Crie uma função que mude a cor do quadrado vermelho para branco.
+function changeColorCenter(color2){
+  let changeColorCenter = document.getElementsByClassName('center-content')[0].style.background = color2;
+  return changeColorCenter;
+}
+changeColorCenter('white')
+

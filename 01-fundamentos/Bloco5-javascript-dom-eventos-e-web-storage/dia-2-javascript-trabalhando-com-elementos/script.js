@@ -70,8 +70,10 @@ h1.classList.add('title');
 
 // 11 . Adicione a classe description nas 3 tags h3 criadas;
 let title3 = document.querySelectorAll('h3');
-console.log(title3);
 
 for (let i = 0; i < title3.length; i += 1) {
   title3[i].classList.add('description');
 }
+
+// 12. Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+main.removeChild(leftContent);

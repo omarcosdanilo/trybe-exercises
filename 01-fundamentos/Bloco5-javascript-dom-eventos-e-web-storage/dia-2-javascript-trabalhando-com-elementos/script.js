@@ -42,6 +42,19 @@ rightContent.className = 'right-content';
 // 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
 let img = document.createElement('img');
 leftContent.appendChild(img);
-console.log(leftContent);
+
 img.className = 'small-image';
 img.src = 'https://picsum.photos/200';
+
+// 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+
+let rightSection = document.querySelector('.right-content');
+let list = document.createElement('ul');
+rightSection.appendChild(list);
+
+const array = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+for (let i = 0; i < array.length; i += 1) {
+  let listItem = document.createElement('li');
+  listItem.innerText = array[i];
+  list.appendChild(listItem);
+}

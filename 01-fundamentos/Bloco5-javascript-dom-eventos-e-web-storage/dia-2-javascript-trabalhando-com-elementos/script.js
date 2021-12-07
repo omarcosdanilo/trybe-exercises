@@ -58,3 +58,9 @@ for (let i = 0; i < array.length; i += 1) {
   listItem.innerText = array[i];
   list.appendChild(listItem);
 }
+
+// 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+for (let i = 0; i <3; i += 1) {
+  let h3 = document.createElement('h3');
+  main.appendChild(h3);
+}

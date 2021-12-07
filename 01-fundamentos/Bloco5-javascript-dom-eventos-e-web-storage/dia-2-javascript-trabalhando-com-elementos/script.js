@@ -64,3 +64,6 @@ for (let i = 0; i <3; i += 1) {
   let h3 = document.createElement('h3');
   main.appendChild(h3);
 }
+
+// 10. Adicione a classe title na tag h1 criada;
+h1.classList.add('title');

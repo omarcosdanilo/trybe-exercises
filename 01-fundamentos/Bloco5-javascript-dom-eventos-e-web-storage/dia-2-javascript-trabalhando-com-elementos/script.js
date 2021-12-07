@@ -25,4 +25,10 @@ let mySection = document.querySelector('.center-content');
 let sectionParagraph = document.createElement('p');
 
 mySection.appendChild(sectionParagraph);
-sectionParagraph.innerText = 'Esse DOM é difícil, mas to começando a aprender'
+sectionParagraph.innerText = 'Esse DOM é difícil, mas to começando a aprender';
+
+// 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+let leftContent = document.createElement('section');
+mainContent.appendChild(leftContent);
+
+leftContent.className = 'left-content';

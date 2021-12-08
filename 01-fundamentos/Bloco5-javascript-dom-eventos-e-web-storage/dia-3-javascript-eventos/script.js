@@ -88,10 +88,10 @@ function changeDayColor() {
     let holidays = document.querySelectorAll(".holiday");
 
     for (let i = 0; i < holidays.length; i += 1) {
-      if (holidays[i].style.background !== "red") {
-        holidays[i].style.background = "red";
-      } else if (holidays[i].style.background === "red") {
-        holidays[i].style.background = "rgb(238,238,238)";
+      if (holidays[i].style.color !== "red") {
+        holidays[i].style.color = "red";
+      } else if (holidays[i].style.color === "red") {
+        holidays[i].style.color = "#777";
       }
     }
   }

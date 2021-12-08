@@ -97,3 +97,18 @@ function changeDayColor() {
   }
 }
 changeDayColor();
+
+// Exercício 4:
+// Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+// ****Adicione a este botão o ID "btn-friday" .
+// ****Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+function btnFriday (string) {
+  let btnContainer = document.querySelector('.buttons-container');
+  let myBtn = document.createElement("button");
+
+  btnContainer.appendChild(myBtn);
+
+  myBtn.innerText = string;
+  myBtn.id = 'btn-friday';
+}
+btnFriday('Sexta-feira');

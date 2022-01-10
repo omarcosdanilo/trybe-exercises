@@ -4,6 +4,7 @@
  */
  html {
   box-sizing: border-box;
+  margin: 20px;
 }
 
 *, *:before, *:after {
@@ -15,11 +16,12 @@ body {
 }
 
 article {
+  font-size: larger;
 
 }
 
 h1 {
-
+  font-size: 1.5em;
 }
 
 h2 {
@@ -39,9 +41,58 @@ section {
 }
 
 figure {
-    margin: 0;
+    margin: 0 0 2.5% 0;
+    
 }
 
 figcaption {
   font-size: .8em;
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    background-color: bisque;
+  }
+
+  section {
+    display: flex;
+    height: 1300px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  section img {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    max-width: 1000px;
+    margin: auto;
+    background-color: ghostwhite;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  article {
+    width: 80%;
+    margin: auto;
+  }
+
+  section {
+    display: flex;
+    height: 1000px;
+  }
+
+  figure img {
+    border-radius: 50%;
+    box-shadow: 0 1px 10px lightslategray ;
+  }
 }

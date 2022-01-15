@@ -54,3 +54,15 @@ totalEstudantes(allLessons);
 // 7 - Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto.
 const keyValue = (obj, position) => Object.values(obj)[position];
 keyValue(lesson1, 0);
+
+// 8 - Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. 
+
+const verifyKeyValue = (obj, key, value) => {
+ const entries = Object.entries(obj);
+ for (let array of entries) {
+   if (array.includes(key) && array.includes(value))
+   return true;
+ }
+  return false
+}
+verifyKeyValue(lesson3, 'turno', 'noite');

@@ -31,3 +31,7 @@ listKeys(lesson2);
 // Crie uma função para mostrar o tamanho de um objeto.
 const sizeObj = (obj) => Object.keys(obj).length;
 sizeObj(lesson2);
+
+// Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
+const listValues = (obj) => Object.values(obj);
+listValues(lesson2);

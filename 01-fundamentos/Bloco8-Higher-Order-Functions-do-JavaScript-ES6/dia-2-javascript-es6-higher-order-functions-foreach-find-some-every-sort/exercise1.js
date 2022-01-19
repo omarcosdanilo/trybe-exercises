@@ -68,6 +68,7 @@ function authorBornIn1947(array) {
 }
 // console.log(authorBornIn1947(books).author.name);
 
+// ================= ==========================
 // 2 - Retorne o nome do livro de menor nome.
 
 function smallerName() {
@@ -82,3 +83,13 @@ function smallerName() {
 }
 
 // console.log(smallerName());
+
+// =================== ==========================
+// 3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
+
+function getNamedBook() {
+  return books.find((book) => {
+    return book.name.length === 26
+  })
+}
+console.log(getNamedBook());

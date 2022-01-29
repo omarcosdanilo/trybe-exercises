@@ -8,10 +8,10 @@ const getMarsTemperature = () => {
 };
 
 
-const sendMarsTemperature = (calback, delay) => {
+const sendMarsTemperature = (callback, delay) => {
 
   setTimeout(() => {
-    console.log(`Mars temperature is: ${calback()} degree Celsius`);
+    console.log(`Mars temperature is: ${callback()} degree Celsius`);
   }, delay());
 };
 

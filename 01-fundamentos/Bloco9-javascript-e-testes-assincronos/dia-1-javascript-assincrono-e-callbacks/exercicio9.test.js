@@ -2,7 +2,6 @@
 const { expect } = require('@jest/globals');
 const { getPokemonDetails } = require('./exercicio8');
 
-const filter = (pokemon) => pokemon.name === 'João'
 const error = new Error('Não temos esse pokémon para você :(');
 const message = 'Olá, seu pokémon é o Bulbasaur, o tipo dele é Grass e a habilidade principal dele é Razor Leaf'
 

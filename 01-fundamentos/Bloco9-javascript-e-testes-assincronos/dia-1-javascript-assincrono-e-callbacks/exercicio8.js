@@ -31,7 +31,7 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-getPokemonDetails((pokemon) => pokemon.name === 'João',
+getPokemonDetails((pokemon) => pokemon.name === 'Bulbasaur',
   (error, message) => error ? console.log(error) : console.log(message)
 );
 

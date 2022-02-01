@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#cryptos {
+  display: flex;
+  max-width: 1920px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+#cryptos li {
+  border-bottom: 1px solid lightgray;
+  list-style: none;
+  padding-top: 5px;
+  margin-top: 5px;
+  width: 295px;
+  background-color: lightpink;
+  margin-right: 5px;
+  padding: 5px;
+}

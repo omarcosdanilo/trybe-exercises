@@ -10,6 +10,9 @@ A aplicação permite a quem usá-la ver posts referentes a 2 subreddits :
 1 - reactjs     
 2 - frontend
 
+## Demonstração
+
+![alt text](path/to/file)
 
 
 ## Stack utilizada

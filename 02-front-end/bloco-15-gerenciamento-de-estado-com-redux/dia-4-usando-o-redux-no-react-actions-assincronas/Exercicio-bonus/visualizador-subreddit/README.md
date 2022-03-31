@@ -1,7 +1,7 @@
 
 # Buscador subreddit
 
-Conhece o Reddit ? É uma comunidade na qual pessoas conseguem criar grupos de discussão acerca de algum assunto. Tal grupo é chamado de subreddit . Para cada subreddit pessoas podem fazer postagens ( posts ).
+Conhece o Reddit ? É uma comunidade na qual pessoas conseguem criar grupos de discussão acerca de algum assunto. Tal grupo é chamado de subreddit. Para cada subreddit pessoas podem fazer postagens ( posts ).
 
 ## Funcionalidades
 

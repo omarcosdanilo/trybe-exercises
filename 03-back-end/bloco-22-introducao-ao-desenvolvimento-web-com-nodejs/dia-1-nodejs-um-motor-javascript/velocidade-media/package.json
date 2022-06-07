@@ -2,12 +2,15 @@
   "name": "velocidade-media",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "velocidade.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node sorteio.js"
+    "velocidade": "node ."
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }

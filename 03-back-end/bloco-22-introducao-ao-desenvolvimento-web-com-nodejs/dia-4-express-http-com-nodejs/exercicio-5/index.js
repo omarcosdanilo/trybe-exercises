@@ -15,6 +15,15 @@ app.post('/simpsons', async (req, res) => {
   }
 })
 
+app.get('/simpsons', async (req, res) => {
+  try {
+    const simpsons = await fs.readFile('./simpsons.json', 'utf8');
+
+    res.status(200).send(JSON.parse(simpsons));
+  } catch (error) {
+    res.status(400).end();  
+  }
+})
 app.listen(4000, () => console.log('Rodando na porta 4000'));
 
 

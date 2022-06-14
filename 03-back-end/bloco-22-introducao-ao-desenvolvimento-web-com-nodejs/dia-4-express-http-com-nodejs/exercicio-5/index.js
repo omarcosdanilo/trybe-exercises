@@ -24,6 +24,23 @@ app.get('/simpsons', async (req, res) => {
     res.status(400).end();  
   }
 })
+
+app.get('/simpsons/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const simpsons = await fs.readFile('./simpsons.json', 'utf8');
+    const simpsonsParsed = JSON.parse(simpsons);
+    const simpson = simpsonsParsed.find((s) => Number(s.id) === Number(id));
+
+    if(!simpson) return  res.status(404).json({ message: 'simpson not found' })
+
+    res.status(200).json(simpson);
+    
+  } catch (error) {
+    res.status(400).end();
+  }
+})
 app.listen(4000, () => console.log('Rodando na porta 4000'));
 
 

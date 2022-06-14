@@ -1,19 +1,20 @@
+const { json } = require('body-parser');
 const express = require('express');
 const fs = require('fs').promises;
 const app = express();
 
 app.use(express.json());
 
-app.post('/simpsons', async (req, res) => {
-  const simpsons = JSON.stringify(req.body);
+// app.post('/simpsons', async (req, res) => {
+//   const simpsons = JSON.stringify(req.body);
 
-  try {
-    await fs.writeFile('./simpsons.json', simpsons)
-    return res.status(200).end();
-  } catch (error) {
-    return res.status(500).end();
-  }
-})
+//   try {
+//     await fs.writeFile('./simpsons.json', simpsons)
+//     return res.status(200).end();
+//   } catch (error) {
+//     return res.status(500).end();
+//   }
+// })
 
 app.get('/simpsons', async (req, res) => {
   try {
@@ -39,6 +40,25 @@ app.get('/simpsons/:id', async (req, res) => {
     
   } catch (error) {
     res.status(400).end();
+  }
+})
+
+app.post('/simpsons', async (req, res) => {
+  try {
+    const { id, name } = req.body
+    const simpsons = await fs.readFile('simpsons.json', 'utf-8');
+    const simpsonsParsed = JSON.parse(simpsons);
+    const simpsonId = simpsonsParsed.findIndex((s) => Number(s.id) === Number(id))
+    console.log(simpsonId);
+    if(simpsonId !== -1) return res.status(409).json({ message: 'id already exists'});
+
+    simpsonsParsed.push({ id, name })
+    
+    await fs.writeFile('./simpsons.json', JSON.stringify(simpsonsParsed));
+
+    return res.status(204).end();
+  } catch (error) {
+    return res.status(400).end();
   }
 })
 app.listen(4000, () => console.log('Rodando na porta 4000'));

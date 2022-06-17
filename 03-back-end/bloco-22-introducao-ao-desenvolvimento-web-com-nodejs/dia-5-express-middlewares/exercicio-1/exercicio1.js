@@ -12,7 +12,17 @@ validateProductName = (req, res, next) => {
   next();
 }
 
-app.post('/sales', validateProductName,  (req, res) => {
+validateInfos = (req, res, next) => {
+  const { infos } = req.body;
+
+  if(!infos) return res.status(400).json({ "message": "O campo infos é obrigatório" });
+  if (!infos.saleDate) return res.status(400).json({ "message": "infos deve possuir o campo saleDate"});
+  if (!infos.warrantyPeriod) return res.status(400).json({ "message": "infos deve possuir o campo warrantyPeriod"});
+
+  next();
+}
+
+app.post('/sales', validateProductName, validateInfos,(req, res) => {
   res.status(201).json({ "message": 'Succesfully created'});
 })
 

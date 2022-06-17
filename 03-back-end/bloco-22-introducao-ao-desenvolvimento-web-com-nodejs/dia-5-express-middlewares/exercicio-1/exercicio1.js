@@ -18,14 +18,18 @@ validateInfos = (req, res, next) => {
   const match = formatoValido.test(infos.saleDate);
 
   if(!infos) return res.status(400).json({ "message": "O campo infos é obrigatório" });
-  if (!infos.saleDate) return res.status(400).json({ "message": "infos deve possuir o campo saleDate"});
-  if (!infos.warrantyPeriod) return res.status(400).json({ "message": "infos deve possuir o campo warrantyPeriod"});
-  if (!match) return res.status(400).json({ "message": "O formato dd/mm/aaaa é obrigatório" });
+  if (!infos.saleDate) return res.status(400).json({ "message": "O campo saleDate é obrigatório"});
+  if (!infos.warrantyPeriod) return res.status(400).json({ "message": "O campo warrantyPeriod é obrigatório"});
+  if (!match) return res.status(400).json({ "message": "O campo saleDate não é uma data válida" });
+  if (infos.warrantyPeriod < 1 || infos.warrantyPeriod > 3) return res.status(400).json({
+    "message": "O campo warrantyPeriod precisa estar entre 1 e 3"
+  })
+
   next();
 }
 
 app.post('/sales', validateProductName, validateInfos,(req, res) => {
-  res.status(201).json({ "message": 'Succesfully created'});
+  res.status(201).json({ "message": "Venda cadastrada com sucesso"});
 })
 
 app.listen(4000, () => console.log('Rodando na porta 4000'));

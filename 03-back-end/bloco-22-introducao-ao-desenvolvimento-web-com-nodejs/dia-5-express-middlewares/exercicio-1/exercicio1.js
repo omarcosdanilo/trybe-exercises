@@ -14,11 +14,13 @@ validateProductName = (req, res, next) => {
 
 validateInfos = (req, res, next) => {
   const { infos } = req.body;
+  const formatoValido = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+  const match = formatoValido.test(infos.saleDate);
 
   if(!infos) return res.status(400).json({ "message": "O campo infos é obrigatório" });
   if (!infos.saleDate) return res.status(400).json({ "message": "infos deve possuir o campo saleDate"});
   if (!infos.warrantyPeriod) return res.status(400).json({ "message": "infos deve possuir o campo warrantyPeriod"});
-
+  if (!match) return res.status(400).json({ "message": "O formato dd/mm/aaaa é obrigatório" });
   next();
 }
 

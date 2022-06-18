@@ -31,7 +31,11 @@ validateInfos = (req, res, next) => {
 }
 
 app.post('/sales', validateProductName, validateInfos,(req, res) => {
-  res.status(201).json({ "message": "Venda cadastrada com sucesso"});
+  const { authorization } = req.headers; 
+  console.log(authorization);
+  if(authorization.length < 16) return res.status(401).json({ message: 'Token inválido!' });
+
+  return res.status(201).json({ "message": "Venda cadastrada com sucesso"});
 })
 
 app.post('/signup', (req, res) => {

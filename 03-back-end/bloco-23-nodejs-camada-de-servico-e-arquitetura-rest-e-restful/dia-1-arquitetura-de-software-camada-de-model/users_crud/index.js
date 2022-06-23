@@ -35,4 +35,21 @@ app.get('/user/:id', async(req, res) => {
   return res.status(200).json(user);
 })
 
+app.put('/user/:id', async (req, res) => {
+  const { firstName, lastName, email, password } = req.body;
+  const { id } = req.params;
+
+  const err = User.isValid(firstName, lastName, email, password)
+  
+  if (err.error) return res.status(400).json(err);
+
+  const updated = await User.update(id, firstName, lastName, email, password);
+
+  if (!updated) return res.status(404).json({
+    "error": true,
+	  "message": "Usuário não encontrado"
+  })
+
+  return res.status(200).json({ id, firstName, lastName, email, password });
+})
 app.listen('3001', () => console.log('Rodando na 3001'));

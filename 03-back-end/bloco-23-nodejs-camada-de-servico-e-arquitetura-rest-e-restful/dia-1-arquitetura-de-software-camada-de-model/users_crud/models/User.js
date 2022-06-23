@@ -29,9 +29,23 @@ const findById = async (id) => {
   return user;
 }
 
+const update = async (id ,firstName, lastName, email, password) => {
+  const user = await findById(id);
+
+  if (user.length === 0) return false;
+  
+  const userUpdated = await connection.execute(
+    'UPDATE users_crud.users SET first_name = ?, last_name = ?, email = ?, password = ? WHERE id = ?;',
+    [firstName, lastName, email, password, id]
+  )
+
+  return userUpdated;
+}
+
 module.exports = {
   create,
   isValid,
   getUsers,
-  findById
+  findById,
+  update
 }

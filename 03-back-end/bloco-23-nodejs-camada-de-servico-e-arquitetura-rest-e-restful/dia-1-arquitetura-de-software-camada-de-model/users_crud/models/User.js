@@ -15,7 +15,14 @@ const create = async (firstName, lastName, email, password) => connection.execut
   [firstName, lastName, email, password]
 )
 
+const getUsers = async () => {
+  const [users] = await connection.execute('SELECT id, first_name, last_name, email, password from users');
+
+  return users;
+}
+
 module.exports = {
   create,
   isValid,
+  getUsers
 }

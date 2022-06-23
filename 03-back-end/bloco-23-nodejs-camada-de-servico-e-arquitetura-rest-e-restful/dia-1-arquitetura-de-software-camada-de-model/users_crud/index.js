@@ -19,4 +19,10 @@ app.post('/user', async (req, res) => {
     );
 })
 
+app.get('/user', async (req, res) => {
+  const users = await User.getUsers();
+  
+  return res.status(200).json(users);
+})
+
 app.listen('3001', () => console.log('Rodando na 3001'));

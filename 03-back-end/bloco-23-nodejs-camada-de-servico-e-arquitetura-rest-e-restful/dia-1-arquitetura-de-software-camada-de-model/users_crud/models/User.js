@@ -21,8 +21,17 @@ const getUsers = async () => {
   return users;
 }
 
+const findById = async (id) => {
+  const [user] = await connection.execute(
+    'SELECT * from users WHERE id = ?;',
+    [id]
+  );
+  return user;
+}
+
 module.exports = {
   create,
   isValid,
-  getUsers
+  getUsers,
+  findById
 }

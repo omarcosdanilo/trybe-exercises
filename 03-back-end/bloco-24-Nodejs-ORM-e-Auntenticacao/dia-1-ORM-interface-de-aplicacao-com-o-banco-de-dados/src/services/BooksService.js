@@ -13,7 +13,7 @@ const BooksService = {
     return book;
   },
 
-  async create({title, author, pageQuantity}) {
+  async create(title, author, pageQuantity) {
     const created = await Book.create({title, author, pageQuantity});
     return created;
   }

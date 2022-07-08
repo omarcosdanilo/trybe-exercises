@@ -21,6 +21,18 @@ const BooksController = {
     } catch (error) {
       res.status(500).json(error.message);
     }
+  },
+
+  async create(req, res, next) {
+    try {
+      const {title, author, pageQuantity} = req.body;
+      
+      const createdBook = await BooksService.create(title, author, pageQuantity);
+
+      res.status(200).json(createdBook);
+    } catch (error) {
+      res.status(500).json(error.message);
+    }
   }
 };
 

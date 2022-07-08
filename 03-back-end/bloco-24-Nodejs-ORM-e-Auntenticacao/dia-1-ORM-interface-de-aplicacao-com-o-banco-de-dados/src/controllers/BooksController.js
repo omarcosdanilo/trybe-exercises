@@ -48,7 +48,17 @@ const BooksController = {
       res.status(500).json(error.message);
     }
   },
-  
+
+  async remove(req, res, next) {
+    try {
+      const { id } = req.params;
+      await BooksService.remove(id);
+      
+      res.status(204).end();
+    } catch (error) {
+      res.status(500).json({ message: 'Algo deu errado '});
+    }
+  }
 };
 
 module.exports = BooksController

@@ -31,7 +31,7 @@ const BooksService = {
   },
 
   async remove(id) {
-    await Book.destroy({ where: id });
+    await Book.destroy({ where: { id } });
   }
 };
 

@@ -28,6 +28,10 @@ const BooksService = {
     const updated = Book.update({ title, author, pageQuantity }, { where: { id } });
 
     return updated;
+  },
+
+  async remove(id) {
+    await Book.destroy({ where: id });
   }
 };
 

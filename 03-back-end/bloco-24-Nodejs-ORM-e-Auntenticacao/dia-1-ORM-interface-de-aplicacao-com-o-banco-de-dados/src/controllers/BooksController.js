@@ -8,6 +8,19 @@ const BooksController = {
     } catch (error) {
       res.status(500).json(error.message);
     }
+  },
+
+  async getById(req, res, next) {
+    try {
+      const { id } = req.params;
+      const book = await BooksService.getById(id);
+
+      if(!book) return res.status(404).json({ message: "Book not found" });
+
+      return res.status(200).json(book);
+    } catch (error) {
+      res.status(500).json(error.message);
+    }
   }
 };
 

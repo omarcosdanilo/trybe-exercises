@@ -38,16 +38,17 @@ const BooksController = {
   async update(req, res, next) {
     try {
       const { id } = req.params;
-      const book = await this.getById(id);
+      const book = await BooksService.exists(id);
       const updatedBook = await BooksService.update(id, req.body);
 
       if (!book) return res.status(404).json({ message: 'Book not found'});
 
-      return res.status(200).json(updatedBook);
+      return res.status(200).json({ meesage: 'Book updated' });
     } catch (error) {
-      
+      res.status(500).json(error.message);
     }
-  }
+  },
+  
 };
 
 module.exports = BooksController

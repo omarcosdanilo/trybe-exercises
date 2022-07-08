@@ -1,5 +1,10 @@
 const { Book } = require('../models');
 const BooksService = {
+  async exists(id) {
+    const book = await Book.findByPk(id);
+
+    return !!book;
+  },
 
   async getAll() {
     const books = await Book.findAll();

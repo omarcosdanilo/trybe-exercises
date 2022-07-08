@@ -11,6 +11,11 @@ const BooksService = {
     const book = await Book.findByPk(id);
 
     return book;
+  },
+
+  async create({title, author, pageQuantity}) {
+    const created = await Book.create({title, author, pageQuantity});
+    return created;
   }
 };
 

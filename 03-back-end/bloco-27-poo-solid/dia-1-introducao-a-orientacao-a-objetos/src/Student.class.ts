@@ -19,4 +19,16 @@ class Student {
       this.workGrades = workGrades;
     };
 
+    sum() {
+      const {grade1, grade2, grade3, grade4} = this.grades;
+      console.log('Soma das notas:', grade1 + grade2 + grade3 + grade4)
+    };
+
+    media() {
+      const {grade1, grade2, grade3, grade4} = this.grades;
+
+      const media = (grade1 + grade2 + grade3 + grade4) / 4;
+
+      console.log(`Média: ${media}`);
+    };
 }

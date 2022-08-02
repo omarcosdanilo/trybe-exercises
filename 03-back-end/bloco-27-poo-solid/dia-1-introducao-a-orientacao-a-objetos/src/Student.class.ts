@@ -32,3 +32,10 @@ class Student {
       console.log(`Média: ${media}`);
     };
 }
+
+const marcos = new Student(
+  1, 'Marcos', {grade1: 10, grade2: 7, grade3: 9, grade4: 8}, {grade1: 9, grade2: 9}
+  )
+
+marcos.sum();
+marcos.media();

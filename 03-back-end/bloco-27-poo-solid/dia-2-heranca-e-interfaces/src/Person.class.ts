@@ -1,7 +1,7 @@
-class Person {
+export default class Person {
   constructor(
-    private _name: string,
-    private _birthDate: Date,
+    protected _name: string,
+    protected _birthDate: Date,
   ) {}
 
   get name(): string {

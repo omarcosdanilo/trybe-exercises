@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/Subject.class.ts"
+    "start": "ts-node src/Teacher.class.ts"
   },
   "keywords": [],
   "author": "",

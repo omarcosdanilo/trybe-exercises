@@ -32,5 +32,3 @@ export default class Person {
     this._birthDate = newBirthDate;
   }
 }
-
-const person1 = new Person('Marcos', new Date());

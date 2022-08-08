@@ -1,5 +1,5 @@
-interface Employee {
-  registration: number;
+export interface Employee {
+  registration: string;
   salary: number;
   admissionDate: Date;
 

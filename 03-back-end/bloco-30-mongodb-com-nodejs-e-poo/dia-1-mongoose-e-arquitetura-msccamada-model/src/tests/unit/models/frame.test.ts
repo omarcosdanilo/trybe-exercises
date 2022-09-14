@@ -6,7 +6,7 @@ import { arrayOfFramesMock, frameMock, frameMockWithId } from '../../mocks/frame
 import mongoose from 'mongoose';
 import Errors from '../../../errors';
 
-describe.only('Frame Model', () => {
+describe('Frame Model', () => {
   const frameModel = new FrameModel();
 
 	before(() => {
@@ -107,6 +107,6 @@ describe.only('Frame Model', () => {
 	
 			expect(frames).to.be.deep.equal(arrayOfFramesMock);
 
-		})
-	})
+		});
+	});
 });

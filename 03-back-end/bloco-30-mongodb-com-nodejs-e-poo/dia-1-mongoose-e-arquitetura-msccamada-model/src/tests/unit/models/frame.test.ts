@@ -2,11 +2,11 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import FrameModel from '../../../models/Frame';
 import { Model } from 'mongoose';
-import { frameMock, frameMockWithId } from '../../mocks/frameMock';
+import { arrayOfFramesMock, frameMock, frameMockWithId } from '../../mocks/frameMock';
 import mongoose from 'mongoose';
 import Errors from '../../../errors';
 
-describe('Frame Model', () => {
+describe.only('Frame Model', () => {
   const frameModel = new FrameModel();
 
 	before(() => {
@@ -99,4 +99,14 @@ describe('Frame Model', () => {
 			expect(updated).to.be.equal(null);
 		});
 	});
+
+	describe('searching all frames', () => {
+		it('should return an array of frames', async () => {
+			sinon.stub(Model, 'find').resolves(arrayOfFramesMock)
+			const frames = await frameModel.read();
+	
+			expect(frames).to.be.deep.equal(arrayOfFramesMock);
+
+		})
+	})
 });

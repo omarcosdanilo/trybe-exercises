@@ -28,7 +28,7 @@ describe('Lens model', () => {
     });
   });
 
-  describe.only('Searching a len', () => {
+  describe('Searching a len', () => {
     afterEach(() => {
       Sinon.restore();
     });

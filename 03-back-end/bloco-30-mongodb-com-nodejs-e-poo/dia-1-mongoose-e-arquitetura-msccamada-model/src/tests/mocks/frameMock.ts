@@ -11,4 +11,22 @@ const frameMockWithId:IFrame & { _id:string } = {
   color: 'Daquele naipe'
 };
 
-export { frameMock, frameMockWithId };
+const arrayOfFramesMock: Array<IFrame & { _id: string}> = [
+  {
+    _id: '62cf1fc6498565d94eba52cd',
+    material: 'Ouro',
+    color: 'Daquele naipe'
+  },
+  {
+    _id: '62cf1fc6498565d94eba52ce',
+    material: 'Prata',
+    color: 'Prata no jeito'
+  },
+  {
+    _id: '62cf1fc6498565d94eba52cf',
+    material: 'Bronze',
+    color: 'latão'
+  },
+]
+
+export { frameMock, frameMockWithId, arrayOfFramesMock };

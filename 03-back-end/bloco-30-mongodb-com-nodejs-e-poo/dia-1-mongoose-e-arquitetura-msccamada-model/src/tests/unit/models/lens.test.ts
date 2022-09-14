@@ -5,12 +5,12 @@ import { Model, mongo } from "mongoose"
 import mongoose from 'mongoose';
 import Sinon from "sinon"
 import Lens from "../../../models/Lens";
-import { lenMock, lenMockWithId } from "../../mocks/lensMock";
+import { arrayOfLensMock, lenMock, lenMockWithId } from "../../mocks/lensMock";
 import Errors from "../../../errors";
 
 
 describe('Lens model', () => {
-  const lens = new Lens();
+  const lensModel = new Lens();
 
   describe('Create a len' , () => {
     beforeEach(() => {
@@ -22,7 +22,7 @@ describe('Lens model', () => {
     });
 
     it('successfully created', async () => {
-      const createdLen = await lens.create(lenMock);
+      const createdLen = await lensModel.create(lenMock);
   
       expect(createdLen).to.be.deep.equal(lenMockWithId)
     });
@@ -39,7 +39,7 @@ describe('Lens model', () => {
       Sinon.stub(mongoose, 'isValidObjectId').returns(false);
 
       try {
-        await lens.readOne('id inválido');
+        await lensModel.readOne('id inválido');
       } catch (catchedError) {
         err = catchedError;
       };
@@ -51,9 +51,23 @@ describe('Lens model', () => {
       Sinon.stub(mongoose, 'isValidObjectId').returns(true);
       Sinon.stub(Model, 'findOne').resolves(lenMockWithId);
 
-      const foundedLen = await lens.readOne(lenMockWithId._id);
+      const foundedLen = await lensModel.readOne(lenMockWithId._id);
 
       expect(foundedLen).to.be.deep.equal(lenMockWithId);
     });
   });
+
+  describe('Searching all lens', () => {
+    afterEach(() => {
+      Sinon.restore();
+    });
+
+		it('should return an array of lens', async () => {
+			Sinon.stub(Model, 'find').resolves(arrayOfLensMock);
+
+			const lens = await lensModel.read();
+	
+			expect(lens).to.be.deep.equal(arrayOfLensMock);
+		});
+	});
 })
